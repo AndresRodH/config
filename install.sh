@@ -11,16 +11,14 @@ git submodule update --init --recursive
 
 source install/link.sh
 
-source install/git.sh
-
 # only perform macOS-specific install
 if [ "$(uname)" == "Darwin" ]; then
   echo -e "\\n\\nRunning on OSX"
 
   source install/brew.sh
-
-  source install/osx.sh
 fi
+
+source install/git.sh
 
 echo "creating vim directories"
 mkdir -p ~/.vim-tmp
