@@ -18,6 +18,7 @@ if [ "$(uname)" == "Darwin" ]; then
   source install/brew.sh
 fi
 
+source install/oh-my-zsh.sh
 source install/git.sh
 
 echo "creating vim directories"
