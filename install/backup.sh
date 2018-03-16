@@ -1,4 +1,3 @@
-
 #!/usr/bin/env bash
 
 # Backup files that are provided by the dotfiles into a ~/dotfiles-backup directory
