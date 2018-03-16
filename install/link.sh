@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DOTFILES=$HOME/code/dotfiles
+DOTFILES=$HOME/Code/dotfiles
 
 echo -e "\\nCreating symlinks"
 echo "=============================="
@@ -15,7 +15,7 @@ for file in $linkables ; do
   fi
 done
 
-echo -e "\\n\\Installing to ~/.config"
+echo -e "\\n\\nInstalling to ~/.config"
 echo "=============================="
 if [ ! -d "$HOME/.config" ]; then
   echo "Creating ~/.config"
@@ -37,7 +37,7 @@ done
 echo -e "\\n\\nCreating neovim symlinks"
 echo "=============================="
 VIMFILES=( "$HOME/.vim:$DOTFILES/config/nvim"
-        "$HOME/.vimrc:$DOTFILES/config/nvim/init.vim" )
+    "$HOME/.vimrc:$DOTFILES/config/nvim/init.vim" )
 
 for file in "${VIMFILES[@]}"; do
   KEY=${file%%:*}
