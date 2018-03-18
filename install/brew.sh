@@ -16,6 +16,7 @@ formulas=(
   tmux
   tree
   zsh
+  hyper
 )
 
 for formula in "${formulas[@]}"; do
