@@ -17,7 +17,6 @@ formulas=(
   tree
   zsh
   hyper
-  iterm2
 )
 
 for formula in "${formulas[@]}"; do
