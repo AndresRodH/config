@@ -4,12 +4,21 @@ call plug#begin('~/.config/nvim/plugged')
 
 " General 
 set clipboard=unnamed
-let mapleader=',' " set leader to comma ,
-" mapping jk to escape key
+
+" MAPPINGS
+" set a map leader for more key combos
+let mapleader = ','
+
+" remap esc
 inoremap jk <esc>
 
+" shortcut to save
+nmap <leader>, :w<cr>
+
 " Appearance 
+set scrolloff=999 " center cursor
 set number " show line numbers
+set relativenumber " show line numbers as relative
 set linebreak " set soft wrapping
 set showbreak=... " show ellipsis at breaking
 
@@ -25,8 +34,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " JavaScript
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript' " JS syntax highlighting
+Plug 'mxw/vim-jsx' " JSX syntax highlighting and indenting
 
 call plug#end()
 
