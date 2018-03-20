@@ -29,6 +29,14 @@ set expandtab " insert whitespace instead of tab chars
 
 set t_Co=256 " explicitly tell vim to use base 256 colors
 
+" enable 24 bit color support if supported
+if (has('mac') && has("termguicolors"))
+  set termguicolors
+endif
+
+" Load colorschemes
+Plug 'joshdick/onedark.vim'
+
 " Airline 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -38,4 +46,7 @@ Plug 'pangloss/vim-javascript' " JS syntax highlighting
 Plug 'mxw/vim-jsx' " JSX syntax highlighting and indenting
 
 call plug#end()
+
+let g:onedark_terminal_italics=1
+colorscheme onedark
 
