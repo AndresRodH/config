@@ -1,0 +1,18 @@
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+tap "jesseduffield/lazydocker"
+tap "jesseduffield/lazygit"
+
+brew "stow"
+brew "neovim"
+brew "node", link: false
+brew "ripgrep"
+brew "starship"
+brew "tmux"
+brew "tree"
+brew "yarn"
+brew "jesseduffield/lazydocker/lazydocker"
+brew "jesseduffield/lazygit/lazygit"
+cask "font-jetbrainsmono-nerd-font"
+cask "iterm2"
