@@ -17,11 +17,9 @@ All the things I use. This targets OSX only
    ```
 
 3. Run the install script
-   {% warning %}
 
-   **Warning:** This will delete the `~/.config/lvim` folder. If you have a custom configuration, back it up, or replace the `zsh/lvim` folder with your custom configuration
+   > **Warning:** This will delete the `~/.config/lvim` folder. If you have a custom configuration, back it up, or replace the `zsh/lvim` folder with your custom configuration
 
-   {% endwarning %}
    ```sh
    cd ~/.dotfiles
    source install.sh
