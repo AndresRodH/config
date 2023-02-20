@@ -12,6 +12,7 @@ else
 fi
 
 # # install from Brewfile
+echo "Installing from Brewfile"
 brew bundle --file ./Brewfile
 
 # install lunarvim
@@ -24,9 +25,15 @@ else
 fi
 
 # remove default lunarvim configuration
+echo "Removing default LunarVIM config folder"
 rm -rf "~/.config/lvim"
 
+# install zsh-zap
+echo "Installing Zap"
+zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh)
+
 # set up symlinks 
+echo "Creating symlinks"
 stow git
 stow nvim
 stow starship
@@ -34,5 +41,8 @@ stow tmux
 stow zsh
 
 # set iTerm2 prefs custom folder
+echo "Setting up iTerm's prefs custom folder"
 defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/.dotfiles/iterm2"
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
+
+echo "All done 🎉"
