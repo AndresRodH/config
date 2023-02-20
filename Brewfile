@@ -14,5 +14,7 @@ brew "tree"
 brew "yarn"
 brew "jesseduffield/lazydocker/lazydocker"
 brew "jesseduffield/lazygit/lazygit"
+
 cask "font-jetbrainsmono-nerd-font"
 cask "iterm2"
+cask "fig"

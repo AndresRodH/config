@@ -389,6 +389,12 @@
         "options": {
           "full_name": "iterm2"
         }
+      },
+      "fig": {
+        "version": "2.14.2",
+        "options": {
+          "full_name": "fig"
+        }
       }
     }
   },

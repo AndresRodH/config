@@ -1,18 +1,18 @@
 #!/bin/zsh
 
 # install/update homebrew
-# which -s brew
-# if [[ $? != 0 ]] ; then
-#   echo "Homebrew not found. Installing..."
-#   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-# else
-#   echo "Homebrew already installed. Updating..."
-#   brew update
-#   brew upgrade
-# fi
+which -s brew
+if [[ $? != 0 ]] ; then
+  echo "Homebrew not found. Installing..."
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+else
+  echo "Homebrew already installed. Updating..."
+  brew update
+  brew upgrade
+fi
 
 # # install from Brewfile
-# brew bundle --file ./Brewfile
+brew bundle --file ./Brewfile
 
 # install lunarvim
 which -s lvim
