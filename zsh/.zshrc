@@ -8,6 +8,7 @@ plug "$HOME/.config/zsh/exports.zsh"
 
 # plugins
 plug "zsh-users/zsh-syntax-highlighting"
+plug "agkozak/zsh-z"
 
 # init starship prompt
 eval "$(starship init zsh)"
