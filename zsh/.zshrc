@@ -9,6 +9,7 @@ plug "$HOME/.config/zsh/exports.zsh"
 # plugins
 plug "zsh-users/zsh-syntax-highlighting"
 plug "agkozak/zsh-z"
+plug "zsh-users/zsh-autosuggestions"
 
 # init starship prompt
 eval "$(starship init zsh)"
