@@ -86,6 +86,7 @@ lvim.builtin.treesitter.ensure_installed = {
   "tsx",
   "css",
   "yaml",
+  "prisma"
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
