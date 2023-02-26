@@ -34,11 +34,7 @@ zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh)
 
 # set up symlinks 
 echo "Creating symlinks"
-stow git
-stow nvim
-stow starship
-stow tmux
-stow zsh
+stow */
 
 # set iTerm2 prefs custom folder
 echo "Setting up iTerm's prefs custom folder"
