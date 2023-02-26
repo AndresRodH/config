@@ -14,5 +14,8 @@ plug "zsh-users/zsh-autosuggestions"
 # init starship prompt
 eval "$(starship init zsh)"
 
+# Allow the use of the z plugin to easily navigate directories
+. /usr/local/etc/profile.d/z.sh
+
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
