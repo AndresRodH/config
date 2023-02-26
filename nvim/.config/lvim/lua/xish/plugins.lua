@@ -28,6 +28,9 @@ M.config = function()
         }
       end
     },
+    {
+      "christoomey/vim-tmux-navigator"
+    }
   }
 end
 
