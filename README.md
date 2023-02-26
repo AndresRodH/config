@@ -1,5 +1,7 @@
 # Dotfiles
 
+![dotfiles image](./dotfiles.png)
+
 All the things I use. This targets OSX only
 
 ## Requirements
