@@ -42,6 +42,8 @@ There's a lot of stuff in here. Actually, there's a lot of stuff that you may no
 2. [tmux](https://github.com/tmux/tmux)
    - Sets up [Tmux Plugin Manager (tpm)](https://github.com/tmux-plugins/tpm) automatically on first run
    - Remaps the prefix to `<C-a>`
+   - `<C-a>I` install tmux plugins
+   - `<C-a>r` reload tmux configuration
    - Check the [configuration](`tmux/.tmux.conf`) for a list of plugins used
 
 3. [neovim](https://neovim.io/)
