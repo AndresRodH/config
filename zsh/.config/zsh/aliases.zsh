@@ -15,3 +15,6 @@ alias vim='lvim'
 
 # reload zsh config
 alias zshreload='source ~/.zshrc'
+
+# clear all local git branches
+alias gitprune="git for-each-ref --format '%(refname:short)' refs/heads | grep -v "master\|main" | xargs git branch -D"
