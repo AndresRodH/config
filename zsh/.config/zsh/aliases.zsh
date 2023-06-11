@@ -11,7 +11,7 @@ alias ls='exa --group-directories-first'
 alias ll='exa --group-directories-first --long'
 
 # the better vim
-alias vim='lvim'
+alias vim='nvim'
 
 # reload zsh config
 alias zshreload='source ~/.zshrc'
