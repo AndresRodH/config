@@ -24,8 +24,6 @@ All the things I use. This targets OSX only
 
 2. Run the install script
 
-   > ⚠️ **Warning:** This will delete the `~/.config/lvim` folder. If you have a custom configuration, back it up, or replace the [`nvim/.config/lvim`](nvim/.config/lvim) folder with your existing configuration
-
    ```sh
    cd ~/.dotfiles
    source install.sh
