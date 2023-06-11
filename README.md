@@ -47,8 +47,7 @@ There's a lot of stuff in here. Actually, there's a lot of stuff that you may no
    - Check the [configuration](`tmux/.tmux.conf`) for a list of plugins used
 
 3. [neovim](https://neovim.io/)
-   - Uses [LunarVim](https://www.lunarvim.org/) 
-   - Has [LunarVim-specific configuration](`nvim/.config/lvim/init.lua`) and [user-specific configuration](`nvim/.config/lvim/lua/xish/*`)
+   - Uses [lazyvim](https://www.lazyvim.org/) 
 
 4. [Homebrew](https://brew.sh/) - for more info check the [`Brewfile`](Brewfile)
 
