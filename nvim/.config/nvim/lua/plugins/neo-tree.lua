@@ -4,5 +4,11 @@ return {
     window = {
       position = "right",
     },
+    filesystem = {
+      filtered_items = {
+        show_hidden_count = true,
+        hide_dotfiles = false,
+      },
+    },
   },
 }
