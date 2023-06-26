@@ -16,6 +16,7 @@ brew "tree"
 brew "yarn"
 brew "jesseduffield/lazydocker/lazydocker"
 brew "jesseduffield/lazygit/lazygit"
+brew "zellij"
 
 cask "raycast"
 cask "font-jetbrainsmono-nerd-font"
