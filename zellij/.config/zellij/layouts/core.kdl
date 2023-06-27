@@ -10,7 +10,12 @@ layout {
   }
   tab name="Terminal" focus=true {
     pane split_direction="vertical" {
-      pane name="TERMINAL"
+      pane split_direction="horizontal" {
+        pane name="TERMINAL"
+        pane name="DIFF" command="git" {
+          args "diff"
+        }
+      }
       pane size="35%" split_direction="horizontal" {
         pane command="htop"
         pane command="yarn" name="INSTALL" start_suspended=true
