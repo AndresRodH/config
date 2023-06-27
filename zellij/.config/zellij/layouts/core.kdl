@@ -12,9 +12,7 @@ layout {
     pane split_direction="vertical" {
       pane split_direction="horizontal" {
         pane name="TERMINAL"
-        pane name="DIFF" command="git" {
-          args "diff"
-        }
+        pane name="DIFF" command="lazygit" 
       }
       pane size="35%" split_direction="horizontal" {
         pane command="htop"
