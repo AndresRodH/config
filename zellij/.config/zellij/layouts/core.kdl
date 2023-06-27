@@ -11,8 +11,8 @@ layout {
   tab name="Terminal" focus=true {
     pane split_direction="vertical" {
       pane split_direction="horizontal" {
-        pane name="TERMINAL"
-        pane name="DIFF" command="lazygit" 
+        pane command="lazygit" name="LAZYGIT"
+        pane size="20%" name="TERMINAL"
       }
       pane size="35%" split_direction="horizontal" {
         pane command="htop"
