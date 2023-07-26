@@ -16,8 +16,5 @@ eval "$(starship init zsh)"
 # let fnm use the local .nvmrc
 eval "$(fnm env --use-on-cd)"
 
-# Allow the use of the z plugin to easily navigate directories
-. /usr/local/etc/profile.d/z.sh
-
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
