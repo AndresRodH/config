@@ -4,6 +4,7 @@ tap "homebrew/core"
 tap "jesseduffield/lazydocker"
 tap "jesseduffield/lazygit"
 
+brew "fnm"
 brew "exa"
 brew "stow"
 brew "neovim"
