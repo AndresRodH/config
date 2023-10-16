@@ -1,0 +1,13 @@
+theme = "tokyonight_storm"
+
+[editor]
+line-number = "relative"
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.file-picker]
+hidden = false
+
+[keys.insert]
+j = { k = "normal_mode"}
