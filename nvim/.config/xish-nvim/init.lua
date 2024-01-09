@@ -8,7 +8,7 @@ if not vim.loop.fs_stat(lazypath) then
 		"clone",
 		"--filter=blob:none",
 		"https://github.com/folke/lazy.nvim.git",
-		"--branch=stable", -- latest stable release
+		"--branch=stable",
 		lazypath,
 	})
 end
@@ -25,6 +25,10 @@ local plugins = {
 		tag = "0.1.5",
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
+	{
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate"
+	}
 }
 
 local opts = {}
@@ -40,3 +44,10 @@ vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
 vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
 vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
+
+local configs = require("nvim-treesitter.configs")
+configs.setup({
+	ensure_installed = { "lua" },
+	highlight = { enable = true },
+	indent = { enable = true }
+})
