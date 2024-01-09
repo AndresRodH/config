@@ -28,6 +28,15 @@ local plugins = {
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate"
+	},
+	{
+		"nvim-neo-tree/neo-tree.nvim",
+		branch = "v3.x",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-web-devicons",
+			"MunifTanjim/nui.nvim",
+		}
 	}
 }
 
@@ -51,3 +60,5 @@ configs.setup({
 	highlight = { enable = true },
 	indent = { enable = true }
 })
+
+vim.keymap.set('n', '<leader>e', ':Neotree filesystem toggle right<cr>')
