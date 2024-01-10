@@ -70,6 +70,24 @@ return {
 			},
 		},
 	},
+	-- adds actions to surround text
+	{
+		"echasnovski/mini.surround",
+		keys = {
+			{ "gsa", desc = "Add surrounding", mode = { "n", "v" } },
+			{ "gsd", desc = "Delete surrounding" },
+			{ "gsr", desc = "Replace surrounding" },
+		},
+		config = function()
+			require("mini.surround").setup({
+				mappings = {
+					add = "gsa",
+					delete = "gsd",
+					replace = "gsr",
+				},
+			})
+		end,
+	},
 	-- which-key to remember keybinds
 	{
 		"folke/which-key.nvim",
@@ -78,14 +96,15 @@ return {
 			plugins = { spelling = true },
 			defaults = {
 				mode = { "n", "v" },
-				["g"] = { name = "+goto" },
-				["]"] = { name = "+next" },
-				["["] = { name = "+prev" },
 				["<leader>b"] = { name = "+buffer" },
 				["<leader>c"] = { name = "+code" },
 				["<leader>f"] = { name = "+file/find" },
 				["<leader>gh"] = { name = "+hunks" },
 				["<leader>x"] = { name = "+diagnostics/quickfix" },
+				["["] = { name = "+prev" },
+				["]"] = { name = "+next" },
+				["g"] = { name = "+goto" },
+				["gs"] = { name = "+surround" },
 			},
 		},
 		config = function(_, opts)
