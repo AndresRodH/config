@@ -33,9 +33,22 @@ return {
 					},
 				},
 			})
-			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
-			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+			vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover" })
+			vim.keymap.set("n", "gK", vim.lsp.buf.signature_help, { desc = "Signature Help" })
+			vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
+			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {
+				desc = "Code action",
+			})
+			vim.keymap.set("n", "<leader>cA", function()
+				vim.lsp.buf.code_action({
+					context = {
+						only = {
+							"source",
+						},
+						diagnostics = {},
+					},
+				})
+			end, { desc = "Source action" })
 		end,
 	},
 }
