@@ -1,5 +1,14 @@
 return {
 	{
+		"zbirenbaum/copilot.lua",
+		cmd = "Copilot",
+		build = ":Copilot auth",
+		opts = {
+			suggestion = { enabled = false },
+			panel = { enabled = false },
+		},
+	},
+	{
 		"L3MON4D3/LuaSnip",
 		dependencies = {
 			"rafamadriz/friendly-snippets",
@@ -15,6 +24,10 @@ return {
 			"saadparwaiz1/cmp_luasnip",
 			"hrsh7th/cmp-nvim-lsp",
 			"saadparwaiz1/cmp_luasnip",
+			{
+				"zbirenbaum/copilot-cmp",
+				dependencies = "copilot.lua",
+			},
 		},
 		config = function()
 			local luasnip = require("luasnip")
@@ -66,8 +79,10 @@ return {
 					end, { "i", "s" }),
 				}),
 				sources = cmp.config.sources({
+					{ name = "copilot", group_index = 1, priority = 100 },
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" },
+					{ name = "path" },
 				}, {
 					{ name = "buffer" },
 				}),
