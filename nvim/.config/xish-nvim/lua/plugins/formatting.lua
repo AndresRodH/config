@@ -14,8 +14,17 @@ return {
 	},
 	opts = {
 		formatters_by_ft = {
-			lua = { "stylua" },
+			css = { { "prettierd", "prettier" } },
+			graphql = { { "prettierd", "prettier" } },
+			html = { { "prettierd", "prettier" } },
 			javascript = { { "prettierd", "prettier" } },
+			javascriptreact = { { "prettierd", "prettier" } },
+			json = { { "prettierd", "prettier" } },
+			lua = { "stylua" },
+			markdown = { { "prettierd", "prettier" } },
+			typescript = { { "prettierd", "prettier" } },
+			typescriptreact = { { "prettierd", "prettier" } },
+			yaml = { { "prettierd", "prettier" } },
 		},
 		format_on_save = { timeout_ms = 500, lsp_fallback = true },
 	},
