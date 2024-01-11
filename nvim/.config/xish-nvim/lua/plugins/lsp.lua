@@ -11,6 +11,7 @@ return {
 				end,
 			},
 			"williamboman/mason-lspconfig.nvim",
+			{ "folke/neodev.nvim", opts = {} },
 		},
 		config = function()
 			require("mason").setup()
