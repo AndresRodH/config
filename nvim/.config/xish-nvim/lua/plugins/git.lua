@@ -39,5 +39,10 @@ return {
 	{
 		"tpope/vim-fugitive",
 		cmd = "Git",
+		keys = {
+			{ "<leader>gg", ":Git<cr>", desc = "Open fugitive" },
+			{ "<leader>gp", ":Git pull<cr>", desc = "Git pull" },
+			{ "<leader>gP", ":Git push<cr>", desc = "Git push" },
+		},
 	},
 }
