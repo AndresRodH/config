@@ -119,4 +119,85 @@ return {
 			wk.register(opts.defaults)
 		end,
 	},
+	-- notifications
+	{
+		"j-hui/fidget.nvim",
+		opts = {},
+		config = function()
+			require("fidget").setup({})
+		end,
+	},
+	-- file tree
+	{
+		"nvim-neo-tree/neo-tree.nvim",
+		branch = "v3.x",
+		cmd = "Neotree",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-web-devicons",
+			"MunifTanjim/nui.nvim",
+		},
+		keys = {
+			{ "<leader>e", ":Neotree toggle<cr>", desc = "Toggle file tree" },
+		},
+		opts = {
+			window = {
+				position = "right",
+			},
+			filesystem = {
+				filtered_items = {
+					show_hidden_count = true,
+					hide_dotfiles = false,
+				},
+			},
+			default_component_configs = {
+				indent = {
+					with_expanders = true, -- if nil and file nesting is enabled, will enable expanders
+					expander_collapsed = "",
+					expander_expanded = "",
+					expander_highlight = "NeoTreeExpander",
+				},
+			},
+		},
+	},
+	-- bufffer "tabs"
+	{
+		"akinsho/bufferline.nvim",
+		event = "VeryLazy",
+		keys = {
+			{ "<leader>bp", "<Cmd>BufferLineTogglePin<CR>", desc = "Toggle pin" },
+			{ "<leader>bP", "<Cmd>BufferLineGroupClose ungrouped<CR>", desc = "Delete non-pinned buffers" },
+			{ "<leader>bo", "<Cmd>BufferLineCloseOthers<CR>", desc = "Delete other buffers" },
+			{ "<leader>br", "<Cmd>BufferLineCloseRight<CR>", desc = "Delete buffers to the right" },
+			{ "<leader>bl", "<Cmd>BufferLineCloseLeft<CR>", desc = "Delete buffers to the left" },
+			{ "<S-h>", "<cmd>BufferLineCyclePrev<cr>", desc = "Prev buffer" },
+			{ "<S-l>", "<cmd>BufferLineCycleNext<cr>", desc = "Next buffer" },
+			{ "[b", "<cmd>BufferLineCyclePrev<cr>", desc = "Prev buffer" },
+			{ "]b", "<cmd>BufferLineCycleNext<cr>", desc = "Next buffer" },
+		},
+		opts = {
+			options = {
+				-- use mini.bufremove to close buffers
+				close_command = function(n)
+					require("mini.bufremove").delete(n, false)
+				end,
+				right_mouse_command = function(n)
+					require("mini.bufremove").delete(n, false)
+				end,
+				diagnostics = "nvim_lsp",
+				always_show_bufferline = false,
+			},
+		},
+	},
+	-- statusline
+	{
+		"nvim-lualine/lualine.nvim",
+		event = "VeryLazy",
+		dependencies = {
+			"nvim-tree/nvim-web-devicons",
+		},
+		opts = {
+			theme = "dracula",
+		},
+	},
 }
