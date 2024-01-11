@@ -88,6 +88,12 @@ return {
 			})
 		end,
 	},
+	{
+		"echasnovski/mini.pairs",
+		config = function()
+			require("mini.pairs").setup()
+		end,
+	},
 	-- which-key to remember keybinds
 	{
 		"folke/which-key.nvim",
