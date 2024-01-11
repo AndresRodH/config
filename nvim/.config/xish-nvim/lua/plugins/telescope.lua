@@ -16,6 +16,9 @@ return {
 					find_files = {
 						find_command = { "rg", "--files", "--iglob", "!.git", "--hidden" },
 					},
+					live_grep = {
+						additional_args = { "--iglob", "!.git", "--hidden" },
+					},
 				},
 				extensions = {
 					["ui-select"] = {
