@@ -94,37 +94,18 @@ return {
 			require("mini.pairs").setup()
 		end,
 	},
-	-- which-key to remember keybinds
-	{
-		"folke/which-key.nvim",
-		event = "VeryLazy",
-		opts = {
-			plugins = { spelling = true },
-			defaults = {
-				mode = { "n", "v" },
-				["<leader>b"] = { name = "+buffer" },
-				["<leader>c"] = { name = "+code" },
-				["<leader>f"] = { name = "+file/find" },
-				["<leader>gh"] = { name = "+hunks" },
-				["<leader>x"] = { name = "+diagnostics/quickfix" },
-				["["] = { name = "+prev" },
-				["]"] = { name = "+next" },
-				["g"] = { name = "+goto" },
-				["gs"] = { name = "+surround" },
-			},
-		},
-		config = function(_, opts)
-			local wk = require("which-key")
-			wk.setup(opts)
-			wk.register(opts.defaults)
-		end,
-	},
 	-- notifications
 	{
 		"j-hui/fidget.nvim",
 		opts = {},
 		config = function()
-			require("fidget").setup({})
+			require("fidget").setup({
+				notification = {
+					window = {
+						winblend = 0,
+					},
+				},
+			})
 		end,
 	},
 	-- file tree
