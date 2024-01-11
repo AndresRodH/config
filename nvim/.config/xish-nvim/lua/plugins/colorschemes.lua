@@ -5,8 +5,16 @@ return {
 		lazy = false,
 		priority = 1000,
 		config = function()
+			require("catppuccin").setup({
+				opts = {
+					integrations = {
+						fidget = true,
+						mason = true,
+						which_key = true,
+					},
+				},
+			})
 			vim.cmd.colorscheme("catppuccin")
-		end
+		end,
 	},
-	{ "rebelot/kanagawa.nvim", name = "kanagawa" },
 }
