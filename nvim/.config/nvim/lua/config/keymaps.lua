@@ -4,3 +4,5 @@
 
 -- exit insert mode with jk
 vim.keymap.set("i", "jk", "<ESC>", { noremap = true, silent = true, desc = "<ESC>" })
+-- option + a to select all text in a file
+vim.keymap.set("n", "<M-a>", "ggVG", { noremap = true, silent = true, desc = "Select all" })
