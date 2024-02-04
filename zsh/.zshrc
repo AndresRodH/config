@@ -13,3 +13,6 @@ plug "zsh-users/zsh-autosuggestions"
 eval "$(starship init zsh)"
 # let fnm use the local .nvmrc
 eval "$(fnm env --use-on-cd)"
+
+# bun completions
+[ -s "/Users/arodriguez/.bun/_bun" ] && source "/Users/arodriguez/.bun/_bun"
