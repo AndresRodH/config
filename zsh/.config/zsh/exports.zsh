@@ -5,6 +5,7 @@ export NVM_DIR="$HOME/.nvm"
 # pnpm
 export PNPM_HOME="/Users/arodriguez/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
+export PATH=$PATH:$HOME/go/bin
 export VISUAL=nvim
 export EDITOR=$VISUAL
 # pnpm end
